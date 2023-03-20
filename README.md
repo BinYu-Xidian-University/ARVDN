@@ -25,7 +25,7 @@ It contains the necessary environment and modules to accomplish our tool ARVDN, 
 * The subfolder "LLVM" contains the necessary files to build the LLVM environment. It should be copied to C:\ .
 * The compressed file "C2M.7z" contains the translator to translate Xd-C programs to MSVL programs.
 * The subfolder "distributedMachines" contains the sub-tool implemented in each distributed machine (M1-Mn), which is employed to accomplish the verification task for each segment.
-* The compressed file "DNRV-MMRV.7z" contains the sub-tool in machine M0 to accomplish the program execution, verification tasks distribution and verification results collection.
+* The compressed file "ARVDN-MMRV.7z" contains the sub-tool in machine M0 to accomplish the program execution, verification tasks distribution and verification results collection.
 
 # Building and running the project
 
@@ -55,13 +55,13 @@ It is not neccssary to build it. Instead, it can be executed directly.
 
 (1) Copy the file folder LLVM to C:\ in machine M0;
 
-(2) Decompress the file "DNRV-MMRV.7z" and build the project;
+(2) Decompress the file "ARVDN-MMRV.7z" and build the project;
 
 (3) The configuration information is written in the file /MSV/Info.txt. An example is shown as follows.
 
 ![360截图17100813153429](https://user-images.githubusercontent.com/11765210/118353353-6b9c6480-b598-11eb-96c7-3fbca04052e5.png)
 
-* In the first line, 1 means the distributed network-based runtime verification (DNRV) is utilized, while 0 means the multi-core machine-based runtime verification (MMRV) is utilized. Since this paper presents the DNRV, the number in this line is set as 1.
+* In the first line, 1 means the adaptive  runtime verification based on distributed network (ARVDN) is utilized, while 0 means the multi-core machine-based runtime verification (MMRV) is utilized. Since this paper presents the ARVDN, the number in this line is set as 1.
 * The second line should be 0, meaning this is a release version. While 1 means this is a debug version.
 * The third line is the port number used to socket communication between M0 and M1-Mn.
 * The fourth line is the number of distributed machines.
